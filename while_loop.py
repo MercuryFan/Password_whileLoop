@@ -5,15 +5,17 @@
 
 password = "a123456"
 i = 3
-while i>0:
+while i > 0:
+	i = i-1
 	pwd = input('請輸入您的密碼:')
 	if pwd == password:
 		print("登入成功!")
-		break
+		break #逃出迴圈
 	else:
-		i = i-1
-		print('密碼輸入錯誤,還有', i, "次機會")
-		if i == 0:
-			break
+		print('密碼輸入錯誤')
+		if i > 0:
+			print('還有', i, '次機會!')
+		else:
+			print('沒有機會了唷! 要鎖帳號了拉!')
 	
 
